@@ -24,7 +24,7 @@ if __name__ == '__main__':
     goal.move_lin.pose_goal.orientation.y = 0.0
     goal.move_lin.pose_goal.orientation.z = 0.0
     goal.move_lin.pose_goal.orientation.w = 1.0
-    goal.move_lin.frame_id = 'world'
+    goal.move_lin.frame_id = 'odom_combined'
 
     goal.profile.vel = 0.2
     goal.profile.accl = 0.1
