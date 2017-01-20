@@ -103,7 +103,6 @@ enum ConstraintTypes
     JLA,
     JLA_MID,
     JLA_INEQ,
-	//JLA_SIG,
 };
 
 enum LookatAxisTypes
