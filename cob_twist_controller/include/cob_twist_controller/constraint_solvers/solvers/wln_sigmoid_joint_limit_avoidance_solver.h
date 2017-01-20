@@ -28,24 +28,24 @@
  *
  ****************************************************************/
 
-#ifndef COB_TWIST_CONTROLLER_CONSTRAINT_SOLVERS_SOLVERS_WLN_JOINT_LIMIT_AVOIDANCE_SOLVER_H
-#define COB_TWIST_CONTROLLER_CONSTRAINT_SOLVERS_SOLVERS_WLN_JOINT_LIMIT_AVOIDANCE_SOLVER_H
+#ifndef COB_TWIST_CONTROLLER_CONSTRAINT_SOLVERS_SOLVERS_WLN_SIGMOID_JOINT_LIMIT_AVOIDANCE_SOLVER_H
+#define COB_TWIST_CONTROLLER_CONSTRAINT_SOLVERS_SOLVERS_WLN_SIGMOID_JOINT_LIMIT_AVOIDANCE_SOLVER_H
 
 #include "cob_twist_controller/cob_twist_controller_data_types.h"
 #include "cob_twist_controller/constraint_solvers/solvers/weighted_least_norm_solver.h"
 
 /// Implementation of ConstraintSolver to solve inverse kinematics with joint limit avoidance
 /// Uses solve method of the WeightedLeastNormSolver
-class WLN_JointLimitAvoidanceSolver : public WeightedLeastNormSolver
+class WLN_Sigmoid_JointLimitAvoidanceSolver : public WeightedLeastNormSolver
 {
     public:
-        WLN_JointLimitAvoidanceSolver(const TwistControllerParams& params,
+        WLN_Sigmoid_JointLimitAvoidanceSolver(const TwistControllerParams& params,
                                       const LimiterParams& limiter_params,
                                       TaskStackController_t& task_stack_controller) :
                 WeightedLeastNormSolver(params, limiter_params, task_stack_controller)
         {}
 
-        virtual ~WLN_JointLimitAvoidanceSolver()
+        virtual ~WLN_Sigmoid_JointLimitAvoidanceSolver()
         {}
 
     private:
@@ -60,4 +60,4 @@ class WLN_JointLimitAvoidanceSolver : public WeightedLeastNormSolver
 
 };
 
-#endif  // COB_TWIST_CONTROLLER_CONSTRAINT_SOLVERS_SOLVERS_WLN_JOINT_LIMIT_AVOIDANCE_SOLVER_H
+#endif  // COB_TWIST_CONTROLLER_CONSTRAINT_SOLVERS_SOLVERS_WLN_SIGMOID_JOINT_LIMIT_AVOIDANCE_SOLVER_H
